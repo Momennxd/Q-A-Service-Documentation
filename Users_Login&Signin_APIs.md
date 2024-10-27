@@ -132,7 +132,7 @@ Response body
 
 | Property             | Type       | Description                                |
 |----------------------|------------|--------------------------------------------|
-| `FirstName`          | `string`   | **Required**. First name of the person     |
+| `FirstName`          | `string`   | (optional) First name of the person     |
 | `SecondName`         | `string`   | (optional) Middle name of the person       |
 | `LastName`           | `string`   | (optional) Last name of the person         |
 | `Address`            | `string`   | (optional) Address of the person           |
@@ -163,7 +163,7 @@ Response body
 |----------------------|------------|--------------------------------------------|
 | `PersonID`           | `int`      | **Required**. Unique ID of the person      |
 | `JoinedDate`         | `DateTime` | **Required**. Date when the person joined  |
-| `FirstName`          | `string`   | **Required**. First name of the person     |
+| `FirstName`          | `string`   | (optional) First name of the person     |
 | `SecondName`         | `string`   | (optional) Middle name of the person       |
 | `LastName`           | `string`   | (optional) Last name of the person         |
 | `Address`            | `string`   | (optional) Address of the person           |
