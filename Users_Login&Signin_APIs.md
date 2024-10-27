@@ -138,7 +138,7 @@ Response body
 | `Address`            | `string`   | (optional) Address of the person           |
 | `Gender`             | `bool`     | (optional) Gender of the person            |
 | `CountryID`          | `byte`     | **Required**. Country ID of the person     |
-| `DateOfBirth`        | `DateTime` | **Required**. Date of birth                |
+| `DateOfBirth`        | `DateTime` | (optional). Date of birth                |
 | `Email`              | `string`   | (optional) Email address                   |
 | `Notes`              | `string`   | (optional) Additional notes                |
 | `PreferredLanguageID`| `short`    | **Required**. Preferred language ID        |
@@ -169,7 +169,7 @@ Response body
 | `Address`            | `string`   | (optional) Address of the person           |
 | `Gender`             | `bool`     | (optional) Gender of the person            |
 | `CountryID`          | `byte`     | **Required**. Country ID of the person     |
-| `DateOfBirth`        | `DateTime` | **Required**. Date of birth                |
+| `DateOfBirth`        | `DateTime` | (optional). Date of birth                |
 | `Email`              | `string`   | (optional) Email address                   |
 | `Notes`              | `string`   | (optional) Additional notes                |
 | `PreferredLanguageID`| `short`    | **Required**. Preferred language ID        |
