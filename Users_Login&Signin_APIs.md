@@ -122,9 +122,9 @@ Response body
 
 | Parameter | Type           | Description                            |
 |-----------|----------------|----------------------------------------|
-| `Username` | `string`      | **Required**. Username of the user     |
-| `Password` | `string`      | **Required**. Password of the user     |
-| `Person`   | `AddPersonDTO` | **Required**. Person details         |
+| `Username` | `string`      | **Required**. Username of the user  MinLength(5)   |
+| `Password` | `string`      | **Required**. Password of the user  MinLength(8)   |
+| `Person`   | `AddPersonDTO` | **Required**. Person details                     |
 
 ---
 
