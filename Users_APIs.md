@@ -1,6 +1,6 @@
 
 
-# -------------------Sign in------------------
+# Sign in
 
 ```http
   POST /api/users/signin
@@ -70,8 +70,7 @@ Response body
 
 ```
 
-# -----------------Log in--------------------
-## Log In
+# Log In
 
 ```http
 POST /api/users/login
