@@ -1,10 +1,6 @@
 
-# Users Login & Signin APIs
 
-### This file is for the users APIs.
-
-
-# Sign in
+# Users Sign in
 
 ```http
   POST /api/users/signin
@@ -73,8 +69,69 @@ Response body
 
 
 ```
+# Institutions Sign in
 
-# Log In
+```http
+  POST api/institutions/signin
+```
+
+
+Request body
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| CreateInstitutionDTO | CreateInstitutionDTO |New institution info to add.
+
+
+
+Response body
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| sendInstitutionDTO  | sendInstitutionDTO   | Institution response object.
+
+
+### Example Request Body
+
+```json
+{
+  "Latitude": "40.7128 N",
+  "Longitude": "74.0060 W",
+  "InstitutionName": "Example University",
+  "WebsiteURL": "https://exampleuniversity.edu",
+  "InstitutionID": 2001,
+  "EstablishedYear": "1850-01-01T00:00:00",
+  "Username": "exampleUser",
+  "Password": "password123",
+  "Notes": "Some notes about the institution",
+  "PreferredLanguageID": 1,
+  "CountryID": 1
+}
+
+```
+
+### Example Response Body
+
+
+```json
+
+{
+  "InstitutionID": 2001,
+  "Latitude": "40.7128 N",
+  "Longitude": "74.0060 W",
+  "InstitutionName": "Example University",
+  "WebsiteURL": "https://exampleuniversity.edu",
+  "EstablishedYear": "1850-01-01T00:00:00",
+  "Username": "exampleUser",
+  "Password": "hashedPassword123",
+  "Notes": "Some notes about the institution",
+  "PreferredLanguageID": 1,
+  "CountryID": 1
+}
+
+```
+
+# Log In (for users and institutions)
 
 ```http
 POST /api/users/login
@@ -183,3 +240,32 @@ Response body
 | `Username`| `string`         | **Required**. Username of the user        |
 | `Password`| `string`         | **Required**. Password of the user        |
  
+ ### CreateInstitutionDTO Schema
+ | Property             | Type       | Description                                       |
+|----------------------|------------|---------------------------------------------------|
+| `Latitude`           | `string`   | Latitude coordinate of the institution            |
+| `Longitude`          | `string`   | Longitude coordinate of the institution           |
+| `InstitutionName`    | `string`   |  **Required**. Name of the institution                           |
+| `WebsiteURL`         | `string`   | URL of the institution's website                  |
+| `EstablishedYear`    | `DateTime` | Year the institution was established              |
+| `Username`           | `string`   | **Required**. Username of the user                |
+| `Password`           | `string`   | **Required**. Password of the user                |
+| `Notes`              | `string?`  | Additional notes or comments (optional)           |
+| `PreferredLanguageID`| `short`    |  **Required**.ID representing the user's preferred language     |
+| `CountryID`          | `byte`     |  **Required**.ID of the country where the institution is located |
+
+ ### SendInstitutionDTO Schema
+ | Property             | Type       | Description                                       |
+|----------------------|------------|---------------------------------------------------|
+| `Latitude`           | `string`   | Latitude coordinate of the institution            |
+| `Longitude`          | `string`   | Longitude coordinate of the institution           |
+| `InstitutionName`    | `string`   |  **Required**. Name of the institution                           |
+| `WebsiteURL`         | `string`   | URL of the institution's website                  |
+| `InstitutionID`      | `int`      | **Primary Key**. Unique ID of the institution     |
+| `EstablishedYear`    | `DateTime` | Year the institution was established              |
+| `Username`           | `string`   | **Required**. Username of the user                |
+| `Password`           | `string`   | **Required**. Password of the user                |
+| `Notes`              | `string?`  | Additional notes or comments (optional)           |
+| `PreferredLanguageID`| `short`    |  **Required**.ID representing the user's preferred language     |
+| `CountryID`          | `byte`     |  **Required**.ID of the country where the institution is located |
+
