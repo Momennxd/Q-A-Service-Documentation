@@ -13,6 +13,14 @@ GET /api/HomeScreen/Top20Collections
 Request body
 - **Parameters**: None
 
+Response body
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| SendCollectionDTO | SendCollectionDTO[ ] | List of collections
+
+
+
+
 ### Example Response Body
 ```json
 [
